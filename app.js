@@ -1,22 +1,40 @@
-console.log('Did I take a class with you recently: Yes or No?') ;
+document.write("Have I taken Web Design 1 before?");
 
-var xan = 1000; // Note-Entry 01 - Global Scope ACTIVE
+const name = "Xan";
 
-xan = xan - 10; // I THINK I did it right??
-
-var name = 'A.J R 2023'; // Creator name displayed
-
-var checkout = true; // BOOLEAN Gemini
-
-var box = null; //OBJECT SYMBOL NULL
-
-
-{
-    const xan = 100
+function spearhead() {
+    console.log("Note-Entry 01 - Global Scope ACTIVE");
+    console.log("I THINK I did it right??");
+    console.log("A.J R 2023");
+    console.log("Creator name displayed");
+    console.log("BOOLEAN Gemini");
+    console.log("OBJECT WORD NULL");
 }
-// Can't touch this block!
+
+spearhead();
+
+function adder(edg1, edg2) {
+    console.log(edg1 + edg2)
+}
+
+adder (10,12);
+
+function edgetransit(){
+    console.log("NULL OBJECT WORD ACCEPTED");
+    console.log("Scanning system...");
+    console.log("FOUND");
+    console.log("VARIABLE Null LOCATED");
+    console.log("PROCEED?");
+}
+
+edgetransit();
 
 
-console.log(xan);
-
-const xandjur = "I lost my sword, help.";
+const person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+      return this.firstName + " " + this.lastName;
+    }
+  };
