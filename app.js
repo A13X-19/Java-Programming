@@ -29,12 +29,18 @@ function edgetransit(){
 
 edgetransit();
 
+const towering = () => {
+    console.log("CONFIRMED");
+}
 
-const person = {
-    firstName: "John",
-    lastName : "Doe",
-    id       : 5566,
-    fullName : function() {
-      return this.firstName + " " + this.lastName;
-    }
-  };
+towering();
+
+const ship = {
+    type:"Destroyer",
+    model: "1270",
+    class: "Wayning",
+    size: "13,000",
+    color:"Grey"
+};
+
+document.getElementById("demo").innerHTML = ship.class + " is a " + ship.type + " type air carrier.";
