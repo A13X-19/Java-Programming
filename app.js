@@ -1,46 +1,20 @@
 document.write("Have I taken Web Design 1 before?");
 
-const name = "Xan";
+const name = 'Xan';
+const age = '20';
+const job = 'mercenary';
+const extra = 'collecting';
 
-function spearhead() {
-    console.log("Note-Entry 01 - Global Scope ACTIVE");
-    console.log("I THINK I did it right??");
-    console.log("A.J R 2023");
-    console.log("Creator name displayed");
-    console.log("BOOLEAN Gemini");
-    console.log("OBJECT WORD NULL");
-}
+console.log(`I didn't know the key by 1 was actually used, heh. Anyway my name is ${name}`);
+console.log(`My physical age is ${age} and I am currently a ${job} for my government. I specialize in ${extra} swords from people of interest.`);
 
-spearhead();
+Number(999) + "<br>" + 
+Number("999") + "<br>" + 
+Number("999");
 
-function adder(edg1, edg2) {
-    console.log(edg1 + edg2)
-}
-
-adder (10,12);
-
-function edgetransit(){
-    console.log("NULL OBJECT WORD ACCEPTED");
-    console.log("Scanning system...");
-    console.log("FOUND");
-    console.log("VARIABLE Null LOCATED");
-    console.log("PROCEED?");
-}
-
-edgetransit();
-
-const towering = () => {
-    console.log("CONFIRMED");
-}
-
-towering();
-
-const ship = {
-    type:"Destroyer",
-    model: "1270",
-    class: "Wayning",
-    size: "13,000",
-    color:"Grey"
-};
-
-document.getElementById("demo").innerHTML = ship.class + " is a " + ship.type + " type air carrier.";
+if(age < 20) {
+    console.log('Welcome, New User!');
+} else if (age > 30) {
+    console.log('Nope, not happening')
+}  else
+    console.log('Access Denied!');
