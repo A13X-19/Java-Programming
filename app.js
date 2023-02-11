@@ -1,5 +1,3 @@
-document.write("Have I taken Web Design 1 before?");
-
 const name = 'Xan';
 const age = '20';
 const job = 'mercenary';
@@ -8,13 +6,38 @@ const extra = 'collecting';
 console.log(`I didn't know the key by 1 was actually used, heh. Anyway my name is ${name}`);
 console.log(`My physical age is ${age} and I am currently a ${job} for my government. I specialize in ${extra} swords from people of interest.`);
 
-Number(999) + "<br>" + 
-Number("999") + "<br>" + 
-Number("999");
-
 if(age < 20) {
     console.log('Welcome, New User!');
 } else if (age > 30) {
     console.log('Nope, not happening')
-}  else
-    console.log('Access Denied!');
+} else
+console.log('Access Denied!');
+
+switch (new Date().getDay()) {
+    case 0:
+      day = "Sunday";
+      break;
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+       day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+}
+
+myNumber = 100
+console.log(myNumber.toString())
+
+str = '2354'
+console.log(Math.floor(str))
