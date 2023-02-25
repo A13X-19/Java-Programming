@@ -16,16 +16,29 @@ for (name of names) {
     }
 }
 
-//
+///
 
-var count = 10;
-document.write("Starting Loop ");
+const user = {
+    name: 'Xan',
+    age: 20,
+    relatioship: false,
+    purchases: ["phone", "pc", "coffee"],
+    name: function() {
+        return this.name + " " + this.age;
+    }
+};
 
-while (count < 20){
-   document.write("Current Count : " + count + "<br />");
-   count++;
-}
+console.log(user.purchases);
+console.log(this);
+
+///
+
+const daily = ["Wake up", "Brush teeth", "Eat", "Write JS", "Play games", "Sleep"]
+
+console.log(daily);
+console.log(daily[4]);
+
+daily.push("I lied I don't sleep");
+
 
 document.write("Loop stopped! ");
-
-document.write("Try a different value for something interesting.")
