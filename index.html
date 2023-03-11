@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="JS-Site" content="Web Design Project">
     <link rel="stylesheet" type="text/css" href="styles/javastyles.css" />
-    <title>Project "Java-Stuff"</title>
+    <title>Project "R,P,S Java Edition"</title>
 </head>
 
 <body>
@@ -17,29 +17,42 @@
         </nav>
     </div>
     <h1 class="Welcome">Welcome to JS-Module Series</h1>
-    
 
-    
-    <section>
-        <head><h3 id="id3">This is THE Website</h3></head>
-        <button type="button" onclick="document.getElementById('id3').style.color = 'red'">Click Me!</button>
-        <article>
-            <p class="information"> I didn't like how blant the website looked compared to everyone else's, so I decided to give it some life and color too!</p>
-        </article>
+
+    <section class="game">
+        <div class="score">
+            <div class="player-score">
+                <h2>Player</h2>
+                <p>0</p>
+            </div>
+            <div class="computer-score">
+                <h2>Computer</h2>
+                <p>0</p>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h1>Rock Paper Scissors</h1>
+            <button>Let's Play!</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Choose </h2>
+            <div class="hands">
+                <img class="player-hand" src="./assets/rock.png" alt="">
+                <img class="computer-hand" img src="./assets/rock.png" alt="">
+            </div>
+            <div class="opitions">
+                <button class="rock">rock</button>
+                <button class="paper">paper</button>
+                <button class="scissors">scissors</button>
+            </div>
+        </div>
     </section>
 
 
-    <div class="row">
-       <div class="column"></div>
-        <figure>
-            <figcaption><h2>Today's date is</h2></figcaption>
-            <button onclick="this.innerHTML=Date()">Press Me!</button>
-        </figure>
-    </div>
-    
-    
 
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 
     <footer>
         <a href="Contact">Contact Info</a>
