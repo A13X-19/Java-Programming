@@ -84,3 +84,14 @@ body.div.info {
     font-size: 1.2rem;
     text-align: center;
 }
+
+
+.footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(169, 169, 169);
+    height: 3vh;
+    width: 100vw;
+}
