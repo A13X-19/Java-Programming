@@ -15,9 +15,26 @@ addBox.addEventListener("click", () => {
 
 function showNotes() {
     notes.forEach((note) => {
-        console.log(note);
+        let liTag = `<li class="note">
+        <div class="detail">
+            <p>Note Title</p>
+            <span>Lorem ipsum</span>
+            </div>
+            <div class="bottom-content">
+                <span>May 8, 2023</span>
+                <div class="settings">
+                    <i class="uil uil-ellipsis-h"></i>
+                    <ul class="menu">
+                        <li><i class="uil uil-pen"></i>Edit</li>
+                        <li><i class="uil uil-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </div>
+        </li>`;
+        addBox.insertAdjacentHTML("afterend", liTag);
     });
 }
+showNotes();
 
 closeIcon.addEventListener("click", () => {
     popupBox.classList.remove("show");
