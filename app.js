@@ -17,11 +17,11 @@ function showNotes() {
     notes.forEach((note) => {
         let liTag = `<li class="note">
         <div class="detail">
-            <p>Note Title</p>
-            <span>Lorem ipsum</span>
+            <p>${note.title}</p>
+            <span>${note.description}</span>
             </div>
             <div class="bottom-content">
-                <span>May 8, 2023</span>
+                <span>${note.date}</span>
                 <div class="settings">
                     <i class="uil uil-ellipsis-h"></i>
                     <ul class="menu">

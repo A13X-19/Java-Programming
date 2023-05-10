@@ -95,8 +95,16 @@ body.div.info {
     width: 100vw;
 }
 
+
+
+
+
 body{
     background: #99bdb5;
+}
+::selection{
+    color: #ccc;
+    background-color: #618cf8;
 }
 
 .wrapper{
@@ -107,18 +115,19 @@ body{
 }
 
 .wrapper li{
-    height: 300;
+    height: 250px;
     list-style: none;
     background-color: #292929;
     border-radius: 5px;
     padding: 15px 20px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .add-box, .icon, .bottom-content,
-.settings .menu li, .popup, header{
+.popup, header, .settings .menu li{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .add-box{
@@ -128,12 +137,13 @@ body{
 }
 
 .add-box .icon {
-    border: 4px dashed;
     height: 78px;
     width: 78px;
+    color: #ffffff;
     font-size: 40px;
     border-radius: 50%;
     justify-content: center;
+    border: 4px dashed;
 }
 
 .add-box p{
@@ -142,10 +152,15 @@ body{
     margin-top: 20px;
 }
 
-.wrapper .note{
+.note{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.note .details{
+    max-height: 165px;
+    overflow-y: auto;
 }
 
 .note p{
@@ -155,19 +170,19 @@ body{
 
 .note span{
     display: block;
-    margin-top: 6px;
-    font-size: 18px;
+    margin-top: 5px;
+    font-size: 17px;
     color: rgb(255, 255, 255);
 }
 
 .note .bottom-content{
-    border-top: 2px solid;
+    border-top: 1px solid;
     padding-top: 10px;
 }
 
 .bottom-content span{
     font-size: 14px;
-    color: #000;
+    color: #ffffff;
 }
 
 .bottom-content .settings i{
@@ -176,11 +191,8 @@ body{
     cursor: pointer;
 }
 
-.settings{
-    position: relative;
-}
-
 .settings .menu{
+    z-index: 1;
     position: absolute;
     bottom: 0;
     right: -5px;
@@ -193,17 +205,23 @@ body{
     transform-origin: bottom right;
 }
 
-.settings:hover .menu{
+.settings.show .menu{
     transform: scale(1);
 }
 
 .settings .menu li{
     height: 25px;
+    font-size: 16px;
+    margin-bottom: 2px;
+    padding: 17px 15px;
+    cursor: pointer;
+    box-shadow: none;
     border-radius: 0;
     justify-content: flex-start;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 17px 15px;
+}
+
+.menu li:last-child{
+    margin-bottom: 0;
 }
 
 .menu li:hover{
@@ -232,31 +250,28 @@ body{
     max-width: 400px;
     width: 100%;
     justify-content: center;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.95);
 }
 
-.popup-box, .popup-box .popup{
+.popup-box, .popup{
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease;
-}
-
-.popup-box.show, .popup-box .popup{
+  }
+  .popup-box.show, .popup-box.show .popup{
     opacity: 1;
     pointer-events: auto;
-}
-
-.popup .content{
-    width: calc(100%-15px);
-    background-color: #fff;
+  }
+  .popup-box.show .popup{
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .popup .content{
     border-radius: 5px;
-}
-
-.popup .content header{
-    padding: 15px 25px;
-    border-bottom: 1px solid #ccc;
-}
-
+    background: #fff;
+    width: calc(100% - 15px);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  
 .content header p{
     font-size: 20px;
     font-weight: 500;
