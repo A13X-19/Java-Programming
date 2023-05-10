@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="JS-Site" content="Web Design Project">
+    <meta name="Java-Site" content="Web Design Projects">
     <link rel="stylesheet" type="text/css" href="styles/javastyles.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Project "RPS Java Edition"</title>
 </head>
 
@@ -16,36 +17,95 @@
             <a href="Module1">Mod 01</a> | <a href="Module2">Mod 02</a> | <a href="Module3">Mod 03</a> | <a href="Module4">Mod 04</a>
         </nav>
     </div>
-    <h1 class="Welcome">Ongoing Project</h1>
+    <h1 class="Welcome">Final Project</h1>
 
 
 
-<section>
-        <article>
-            <p class="Project"> I figured I'd use this project as a chance to make a would-be info page around several fictional characters I've made in the past year.</p>
-        </article>
-    </section>
-    
-    <div class="row2">
-        <div class="column">
-            <h2>What is the Xel Dynasty?</h2>
-            <p>The Xel Dynasty is a large cluster of planets in a solary-system pattern similar to our own that exists on the edge of the Universe. It occupies many diverse planets and species, and is positioned around the NEXUS, a Dimensional Well build around the systems sun millenium ago by the Ancients eons ago.</p>
-            
-            <p>The Dimensional Well, codenamed NEXUS, is a gas giant-size super-transporter built by the Ancients eons ago. Its original purpose/intention is still unknown, but during the Modern Epoch, has become a super-hub for gathering all kinds of technology and weaponry - believed to be - from other dimensions. It rests in the neutral space of the Dynasty's borders but is mostly occupied by Xel military forces.</p>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Add a new Note</p>
+                    <i class="uil uil-times"></i>
+                </header>
+                <form action="#">
+                    <div class="row title"></div>
+                    <label>Title</label>
+                    <input type="text">
+                </div>
+                <div class="row description">
+                    <label>Description</label>
+                    <textarea></textarea>
+                </div>
+                <button>Add New Note</button>
+            </form>
         </div>
+    </div>
+</div>
 
-        <div class="column">
-            <figure>
-                <img src="assets/Dynasty Sigil.jpg" alt="Banner Logo" style="width:358px;height:350px;"/>
-                <figcaption>Sigil Of The Dynasty</figcaption>
-            </figure>
-        </div>
+    <div class="wrapper">
+        <li class="add-box">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Write new Notes here!</p>
+        </li>
+        <li class="note">
+            <div class="detail">
+                <p>Note Title</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem doloremque eum nobis obcaecati et amet blanditiis quod odio, nemo, repellat fuga quo temporibus explicabo officiis vero nulla ducimus modi?</span>
+            </div>
+            <div class="bottom-content">
+                <span>May 8, 2023</span>
+                <div class="settings">
+                    <i class="uil uil-ellipsis-h"></i>
+                    <ul class="menu">
+                        <li><i class="uil uil-pen"></i>Edit</li>
+                        <li><i class="uil uil-trash"></i>Delete</li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="note">
+            <div class="detail">
+                <p>Note Title</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem doloremque eum nobis obcaecati et amet blanditiis quod odio, nemo, repellat fuga quo temporibus explicabo officiis vero nulla ducimus modi?</span>
+            </div>
+            <div class="bottom-content">
+                <span>May 8, 2023</span>
+                <div class="settings">
+                    <i class="i.uil uil-ellipsis-h"></i>
+                </div>
+            </div>
+        </li>
+        <li class="note">
+            <div class="detail">
+                <p>Note Title</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem doloremque eum nobis obcaecati et amet blanditiis quod odio, nemo, repellat fuga quo temporibus explicabo officiis vero nulla ducimus modi?</span>
+            </div>
+            <div class="bottom-content">
+                <span>May 8, 2023</span>
+                <div class="settings">
+                    <i class="i.uil uil-ellipsis-h"></i>
+                </div>
+            </div>
+        </li>
+        <li class="note">
+            <div class="detail">
+                <p>Note Title</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatem doloremque eum nobis obcaecati et amet blanditiis quod odio, nemo, repellat fuga quo temporibus explicabo officiis vero nulla ducimus modi?</span>
+            </div>
+            <div class="bottom-content">
+                <span>May 8, 2023</span>
+                <div class="settings">
+                    <i class="i.uil uil-ellipsis-h"></i>
+                </div>
+            </div>
+        </li>
     </div>
 
 
 
-    <h2>Characters of Interest</h2>
-    <div id="info"></div>
+
+
 
 
     <script src="./app.js"></script>

@@ -1,34 +1,46 @@
-let data = [
-    {
-        name: 'Seer Imperium,',
-        age: '34'
-    },
-    {
-        name: 'Heir Reina,',
-        age: '31'
-    },
-    {
-        name: 'Xan Mischief,',
-        age: '20'
-    },
-    {
-        name: 'TOZA Shison,',
-        age: '19'
-    },
-    {
-        name: 'Capt. Archith,',
-        age: '27'
-    },
-    {
-        name: 'Lt. Kivut,',
-        age: '38'
-    }
-];
+const addBox = document.querySelector(".add-box"),
+popupBox = document.querySelector(".popup-box"),
+closeIcon = popupBox.querySelector("header i"),
+titleTag = popupBox.querySelector("input"),
+descTag = popupBox.querySelector("textarea"),
+addBtn = popupBox.querySelector("button");
 
-const info = document.querySelector('#info')
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-let details = data.map(function(item) {
-    return '<div>' + item.name + ' ' + 'Age: ' + item.age + '</div>';
+
+const notes = JSON.parse(localStorage.getItem("notes") || "[]")
+addBox.addEventListener("click", () => {
+    popupBox.classList.add("show");
 });
 
-info.innerHTML = details.join('\n');
+function showNotes() {
+    notes.forEach((note) => {
+        console.log(note);
+    });
+}
+
+closeIcon.addEventListener("click", () => {
+    popupBox.classList.remove("show");
+});
+
+addBtn.addEventListener("click", e => {
+    e.preventDefault();
+    let noteTitle = titleTag.value,
+    noteDesc = descTag.value;
+    console.log(noteTitle, noteDesc);
+
+    if(noteTitle || noteDesc) {
+        let dateObj = new Date(),
+        month = months[dateObj.getMonth()],
+        day = dateObj.getDate(),
+        year = dateObj.getFullYear();
+
+        let noteInfo = {
+            title: noteTitle, description: noteDesc,
+            date: '${month} ${day}, ${year}'
+        }
+        notes.push(noteInfo);
+        localStorage,setItems("notes", JSON.stringify(notes));
+        closeIcon.click();
+    }
+});
