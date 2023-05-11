@@ -35,7 +35,7 @@
     width: 100vw;
 }
 
-.menu {
+.menu-1 {
     position: absolute;
     margin: 15px;
     right: 15%;
@@ -95,10 +95,6 @@ body.div.info {
     width: 100vw;
 }
 
-
-
-
-
 body{
     background: #99bdb5;
 }
@@ -107,11 +103,20 @@ body{
     background-color: #618cf8;
 }
 
+
+
+
+
+
+
+
+
+
 .wrapper{
     margin: 50px;
     display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, 260px);
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 265px);
 }
 
 .wrapper li{
@@ -239,7 +244,7 @@ body{
     height: 100%;
     width: 100%;
     z-index: 2;
-    background-color: hsla(0, 0%, 0%, 0.15);
+    background-color: #ffffff;
 }
 
 .popup-box .popup{
@@ -269,7 +274,7 @@ body{
     border-radius: 5px;
     background: #fff;
     width: calc(100% - 15px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px #ffffff80;
   }
   
 .content header p{
@@ -278,7 +283,7 @@ body{
 }
 
 .content header i{
-    color: #000000;
+    color: #ffffff;
     cursor: pointer;
     font-size: 23px;
 }
